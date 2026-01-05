@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+🎓 CampusHub – Student Marketplace & Xerox Management Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CampusHub is a frontend-only web application designed to improve daily campus life by providing a student marketplace, online xerox ordering, and role-based dashboards — all built using React with a focus on UX, scalability, and real-world flows.
 
-## Available Scripts
+This project was developed as part of a hackathon / college project, simulating backend behavior using localStorage (no backend required).
 
-In the project directory, you can run:
+🚀 Features
+🔐 Authentication (Frontend-only)
+Login & Signup system
+localStorage used as a fake backend
+Protected routes
+Persistent login state
+Logout with confirmation modal
 
-### `npm start`
+🛒 Student Marketplace
+Browse 50+ products
+Search products by name
+Filter by category (Books, Electronics, Lab, Accessories)
+Sort by price (Low → High / High → Low)
+Product images
+Product detail modal (animated)
+Skeleton loaders (perceived performance)
+Empty state handling
+Smooth page transitions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🖨️ Xerox Ordering System
+Place xerox orders (UI simulation)
+View order status
+Admin can mark orders as “Ready”
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📦 Orders Page
+View all orders
+Status badges (Printing / Ready)
+Fully dark-mode compatible UI
 
-### `npm test`
+👤 Profile Section
+View & edit profile details
+Profile image upload (preview only)
+Tabs: Profile | Orders | Wishlist
+Data persistence using localStorage
+Logout confirmation modal
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🛠️ Admin Dashboard
+View all xerox orders
+Update order status
+Clean admin UI
+Dark mode compatible
 
-### `npm run build`
+🌗 Dark / Light Mode
+Theme toggle in navbar
+CSS variables used throughout
+Consistent UI in both modes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📱 Responsive UI
+Mobile-friendly navbar
+Hamburger menu
+Adaptive layouts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🧱 Tech Stack
+React (Vite / CRA)
+React Router
+JavaScript (ES6+)
+CSS (CSS variables, animations)
+localStorage (fake backend)
+❌ No backend
+❌ No Firebase
+✅ Frontend-only (by design)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🗂️ Project Structure
+src/
+│── components/
+│   ├── Navbar.jsx
+│   ├── PageWrapper.jsx
+│   ├── ProductCard.jsx
+│   ├── ProductModal.jsx
+│   ├── ProductSkeleton.jsx
+│   ├── ProtectedRoute.jsx
+│   ├── ScrollToTop.jsx
+│
+│── pages/
+│   ├── Login.jsx
+│   ├── Signup.jsx
+│   ├── Home.jsx
+│   ├── Marketplace.jsx
+│   ├── AddProduct.jsx
+│   ├── Xerox.jsx
+│   ├── Orders.jsx
+│   ├── Admin.jsx
+│   ├── Profile.jsx
+│
+│── data/
+│   ├── products.js
+│   ├── orders.js
+│
+│── index.css
+│── App.js
+│── main.jsx
 
-### `npm run eject`
+🔑 Demo Credentials
+Use the following credentials to log in:
+Email: user@gmail.com
+Password: 123456
+These credentials are auto-seeded into localStorage on first load.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🧪 How Authentication Works (Frontend Simulation)
+User data is stored in localStorage
+Login validates credentials against stored data
+isLoggedIn flag controls access
+Protected routes redirect unauthenticated users to login
+This approach simulates real authentication flows without a backend.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🎯 Key UX & Engineering Highlights
+Skeleton loaders for better perceived performance
+Modal animations (fade + scale)
+Scroll-safe layouts
+Fixed navbar for reliability
+Dark mode using CSS variables
+Reusable layout components
+Clean separation of concerns
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🏆 Hackathon & Portfolio Value
+This project demonstrates:
+Real-world frontend architecture
+State management
+UX-first thinking
+Backend-ready design
+Scalable component structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Perfect for:
+Hackathons
+College submissions
+Frontend portfolio
+Internship interviews
 
-## Learn More
+🛣️ Future Enhancements
+Backend integration (Firebase / Node.js)
+Real payments (Google Pay API)
+Multi-user support
+Wishlist persistence
+Order notifications
+Admin analytics dashboard
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+📸 Screenshots (Optional)
+Add screenshots here for Marketplace, Login, Profile, Admin Dashboard
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👨‍💻 Author
+Vedant Cheulkar
+Frontend Developer
+Built with ❤️ for improving campus life
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📜 License
+This project is for educational and demonstration purposes.
