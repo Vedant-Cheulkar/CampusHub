@@ -1,10 +1,20 @@
 import { useEffect, useState } from "react";
 import PageWrapper from "../components/PageWrapper";
+import { useNavigate } from "react-router-dom";
+
 
 const Profile = () => {
     const [activeTab, setActiveTab] = useState("profile");
     const [isEditing, setIsEditing] = useState(false);
     const [showLogout, setShowLogout] = useState(false);
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("loggedInUser");
+        navigate("/");
+    };
+
 
     const [user, setUser] = useState({
         name: "Rahul Patil",
@@ -126,7 +136,7 @@ const Profile = () => {
                             <h3>Logout?</h3>
                             <p>Are you sure you want to logout?</p>
                             <button onClick={() => setShowLogout(false)}>Cancel</button>
-                            <button style={styles.logoutBtn}>Confirm</button>
+                            <button onClick={handleLogout} style={styles.logoutBtn}>Logout</button>
                         </div>
                     </div>
                 )}

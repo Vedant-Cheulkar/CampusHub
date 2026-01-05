@@ -9,6 +9,21 @@ import Xerox from "./pages/Xerox";
 import Orders from "./pages/Orders";
 import Admin from "./pages/Admin";
 import Profile from "./pages/Profile";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Signup from "./pages/Signup";
+
+
+
+if (!localStorage.getItem("user")) {
+  localStorage.setItem(
+    "user",
+    JSON.stringify({
+      email: "user@gmail.com",
+      password: "123456",
+      name: "Rahul Patil"
+    })
+  );
+}
 
 
 function App() {
@@ -18,9 +33,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/profile" element={<ProtectedRoute> <Profile /> </ProtectedRoute>} />
         <Route path="/home" element={<Home />} />
-        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/marketplace" element={<ProtectedRoute> <Marketplace /> </ProtectedRoute>} />
         <Route path="/add-product" element={<AddProduct />} />
         <Route path="/xerox" element={<Xerox />} />
         <Route path="/orders" element={<Orders />} />

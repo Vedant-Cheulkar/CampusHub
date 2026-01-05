@@ -6,30 +6,69 @@ const Orders = () => {
         <PageWrapper title="My Orders">
             {initialOrders.length === 0 ? (
                 // Empty state
-                <p>You have not placed any orders yet.</p>
+                <p style={{ opacity: 0.8 }}>
+                    You have not placed any orders yet.
+                </p>
             ) : (
                 // Orders list
                 initialOrders.map((order) => (
                     <div
                         key={order.id}
-                        style={{
-                            background: "#ffffff",
-                            padding: "12px",
-                            borderRadius: "6px",
-                            marginBottom: "10px",
-                            boxShadow: "0 1px 4px rgba(0,0,0,0.1)"
-                        }}
+                        style={styles.card}
                     >
-                        <p>
-                            <b>Order #{order.id}</b>
+                        <p style={styles.orderId}>
+                            Order #{order.id}
                         </p>
+
                         <p>Pages: {order.pages}</p>
-                        <p>Status: {order.status}</p>
+
+                        <p>
+                            Status:{" "}
+                            <span
+                                style={{
+                                    ...styles.status,
+                                    ...(order.status === "Ready"
+                                        ? styles.ready
+                                        : styles.printing)
+                                }}
+                            >
+                                {order.status}
+                            </span>
+                        </p>
                     </div>
                 ))
             )}
         </PageWrapper>
     );
+};
+
+const styles = {
+    card: {
+        backgroundColor: "var(--card-bg)", // ✅ dark-mode safe
+        color: "var(--text-color)",
+        padding: "14px",
+        borderRadius: "8px",
+        marginBottom: "12px",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.15)"
+    },
+    orderId: {
+        fontWeight: "600",
+        marginBottom: "6px"
+    },
+    status: {
+        padding: "2px 8px",
+        borderRadius: "12px",
+        fontSize: "12px",
+        fontWeight: "600"
+    },
+    ready: {
+        backgroundColor: "#22c55e",
+        color: "#ffffff"
+    },
+    printing: {
+        backgroundColor: "#f59e0b",
+        color: "#ffffff"
+    }
 };
 
 export default Orders;

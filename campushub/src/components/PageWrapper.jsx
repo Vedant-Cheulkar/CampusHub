@@ -16,7 +16,8 @@ const styles = {
     container: {
         padding: "24px",
         maxWidth: "1200px",
-        margin: "0 auto"
+        margin: "0 auto",
+        minHeight: "calc(100vh - 64px)" // ✅ allows natural scroll
     },
     title: {
         marginTop: 0,
@@ -25,7 +26,7 @@ const styles = {
         fontWeight: "600"
     },
     content: {
-        backgroundColor: "#f9fafb",
+        backgroundColor: "var(--card-bg)", // ✅ theme-safe
         padding: "20px",
         borderRadius: "8px"
     }
