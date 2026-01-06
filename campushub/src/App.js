@@ -11,7 +11,8 @@ import Admin from "./pages/Admin";
 import Profile from "./pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Signup from "./pages/Signup";
-
+import Forgot from "./pages/Forgot";
+import OrderDetails from "./pages/OrderDetails";
 
 
 if (!localStorage.getItem("user")) {
@@ -33,6 +34,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/forgot" element={<Forgot />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<ProtectedRoute> <Profile /> </ProtectedRoute>} />
         <Route path="/home" element={<Home />} />
@@ -40,6 +42,7 @@ function App() {
         <Route path="/add-product" element={<AddProduct />} />
         <Route path="/xerox" element={<Xerox />} />
         <Route path="/orders" element={<Orders />} />
+        <Route path="/order-details" element={<OrderDetails />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>

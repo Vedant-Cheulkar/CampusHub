@@ -15,9 +15,10 @@ const PageWrapper = ({ title, children }) => {
 const styles = {
     container: {
         padding: "24px",
+        paddingTop: "88px",      // ✅ navbar height (64px) + spacing
         maxWidth: "1200px",
         margin: "0 auto",
-        minHeight: "calc(100vh - 64px)" // ✅ allows natural scroll
+        minHeight: "100vh"
     },
     title: {
         marginTop: 0,
@@ -26,7 +27,7 @@ const styles = {
         fontWeight: "600"
     },
     content: {
-        backgroundColor: "var(--card-bg)", // ✅ theme-safe
+        backgroundColor: "var(--card-bg)",
         padding: "20px",
         borderRadius: "8px"
     }
