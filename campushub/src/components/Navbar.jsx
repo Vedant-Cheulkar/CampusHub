@@ -58,7 +58,7 @@ const Navbar = () => {
                         <NavLink to="/marketplace" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Marketplace</NavLink>
                         <NavLink to="/xerox" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Xerox</NavLink>
                         <NavLink to="/orders" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Orders</NavLink>
-                        <NavLink to="/admin" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Admin</NavLink>
+                        {/* <NavLink to="/admin" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Admin</NavLink> */}
                     </div>
 
                     {/* 3. Right Controls */}
@@ -102,7 +102,7 @@ const Navbar = () => {
                     <NavLink to="/add-product" className="mobile-link highlight">Sell Item</NavLink>
                     <NavLink to="/xerox" className="mobile-link">Xerox</NavLink>
                     <NavLink to="/orders" className="mobile-link">Orders</NavLink>
-                    <NavLink to="/admin" className="mobile-link">Admin</NavLink>
+                    {/* <NavLink to="/admin" className="mobile-link">Admin</NavLink> */}
                     <NavLink to="/profile" className="mobile-link">Profile</NavLink>
                 </div>
             </nav>

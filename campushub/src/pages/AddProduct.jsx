@@ -57,7 +57,7 @@ const AddProduct = () => {
     };
 
     return (
-        <PageWrapper title="Sell Item">
+        <PageWrapper>
             <style>{styles}</style>
 
             <div className="add-product-container">

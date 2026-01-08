@@ -61,7 +61,7 @@ const Xerox = () => {
     };
 
     return (
-        <PageWrapper title="Xerox Order">
+        <PageWrapper>
             <style>{styles}</style>
 
             <div className="xerox-container">

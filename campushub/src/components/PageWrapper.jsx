@@ -14,8 +14,6 @@ const PageWrapper = ({ title, children }) => {
 
 const styles = {
     container: {
-        padding: "24px",
-        paddingTop: "88px",      // ✅ navbar height (64px) + spacing
         maxWidth: "1200px",
         margin: "0 auto",
         minHeight: "100vh"

@@ -35,7 +35,7 @@ const Marketplace = () => {
     const categories = ["All", "Books", "Electronics", "Lab", "Accessories"];
 
     return (
-        <PageWrapper title="Marketplace">
+        <PageWrapper>
             <style>{styles}</style>
 
             <div className="marketplace-layout">
@@ -91,7 +91,6 @@ const Marketplace = () => {
                                     <option value="lowToHigh">Price: Low to High</option>
                                     <option value="highToLow">Price: High to Low</option>
                                 </select>
-                                <span className="material-symbols-outlined sort-icon">arrow_drop_down</span>
                             </div>
                         </div>
 
@@ -178,7 +177,7 @@ const styles = `
     .marketplace-layout {
         width: 100%;
         min-height: 100vh;
-        background-color: var(--mp-bg);
+        // background-color: var(--mp-bg);
         color: var(--mp-text);
         font-family: 'Lexend', sans-serif;
     }
@@ -186,7 +185,7 @@ const styles = `
     .marketplace-container {
         max-width: 80rem; /* 7xl equivalent */
         margin: 0 auto;
-        padding: 1.25rem;
+        padding: 24px;
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -201,7 +200,6 @@ const styles = `
     }
 
     .page-heading {
-        padding: 0 1rem;
         display: flex;
         flex-direction: column;
         gap: 0.75rem;

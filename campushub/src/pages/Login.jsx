@@ -49,7 +49,7 @@ const Login = () => {
     };
 
     return (
-        <PageWrapper title="Login">
+        <PageWrapper>
             {/* Injecting CSS styles defined at the bottom */}
             <style>{styles}</style>
 
@@ -152,6 +152,11 @@ const Login = () => {
 
 // CSS Styles defined as a string to allow Pseudo-classes and Dark Mode
 const styles = `
+/* 🔥 CRITICAL FIX */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
     /* Variables */
     :root {
         --c-primary: #135bec;
@@ -218,7 +223,7 @@ const styles = `
     .login-card {
         width: 100%;
         background-color: var(--c-card);
-        padding: 2rem;
+        padding: 1.75rem;
         border-radius: 0.75rem;
         box-shadow: var(--shadow-lg);
         border: 1px solid var(--c-border);
@@ -246,8 +251,8 @@ const styles = `
     }
     .input-field {
         width: 100%;
-        height: 48px;
-        padding: 0 1rem;
+        height: 44px;
+        padding: 0 0.75rem;
         border-radius: 0.5rem;
         border: 1px solid var(--c-border);
         background-color: var(--c-input-bg);
@@ -264,6 +269,7 @@ const styles = `
     /* Password Toggle */
     .password-wrapper {
         display: flex;
+        width: 100%; 
         position: relative;
     }
     .password-field {

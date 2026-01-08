@@ -18,7 +18,7 @@ const Orders = () => {
     };
 
     return (
-        <PageWrapper title="My Orders">
+        <PageWrapper>
             <style>{styles}</style>
 
             <div className="orders-container">
@@ -28,14 +28,14 @@ const Orders = () => {
                     <h1 className="page-title">Your Orders</h1>
                 </div>
 
-                {/* --- TABS --- */}
+                {/* --- TABS ---
                 <div className="tabs-container">
                     <div className="tabs-list">
                         <a href="#" className="tab-item active">All Orders</a>
                         <a href="#" className="tab-item">Marketplace</a>
                         <a href="#" className="tab-item">Xerox</a>
                     </div>
-                </div>
+                </div> */}
 
                 {/* --- TABLE SECTION --- */}
                 <div className="table-wrapper">
